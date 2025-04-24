@@ -1,3 +1,4 @@
+.DS_Store
 /examples/rp/mkcertRootCA.pem
 /examples/rp/keys/
 /examples/rp/config.yaml
