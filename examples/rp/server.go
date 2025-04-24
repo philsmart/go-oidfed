@@ -209,7 +209,8 @@ func initServer() {
 	http.HandleFunc("/.well-known/openid-federation", handleEntityConfiguration)
 
 	fmt.Printf("Serving on %s\n", conf.ServerAddr)
-	if err := http.ListenAndServe(conf.ServerAddr, nil); err != nil {
+
+	if err := http.ListenAndServeTLS(conf.ServerAddr, "certs/rp.crt", "certs/rp.key", nil); err != nil {
 		log.Fatal(err)
 	}
 }

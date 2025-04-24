@@ -118,7 +118,7 @@ func main() {
 	log.Println("Added Endpoints")
 
 	log.Printf("Start serving on port %d\n", c.ServerPort)
-	if err = http.ListenAndServe(fmt.Sprintf(":%d", c.ServerPort), entity.HttpHandlerFunc()); err != nil {
+	if err = http.ListenAndServeTLS(fmt.Sprintf(":%d", c.ServerPort), "certs/server-fed.crt", "certs/server-fed.key", entity.HttpHandlerFunc()); err != nil {
 		panic(err)
 	}
 	// if err = entity.Listen(fmt.Sprintf(":%d", c.ServerPort)); err != nil {

@@ -1,0 +1,30 @@
+{
+    "openid_provider": {
+      "scopes_supported": {
+        "superset_of": [
+          "openid",
+          "profile",
+          "email"
+        ],
+        "essential": true
+      },
+      "token_endpoint_auth_methods_supported": {
+        "essential": true,
+        "subset_of": [
+          "client_secret_basic"
+        ],
+        "superset_of": [
+          "client_secret_basic"
+        ]
+      },
+     "grant_types_supported": {
+        "essential": true,
+        "superset_of": [
+          "authorization_code"
+        ],
+        "subset_of": [
+          "authorization_code"
+        ]
+      }
+    }
+  }
